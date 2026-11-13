@@ -225,6 +225,14 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .mo .resultat.monte { clip-path: circle(0% at 50% 40%); opacity: 1; transform: none; transition: clip-path 1.3s cubic-bezier(.16,.84,.24,1) .35s; }
 .mo .resultat.monte.vu { clip-path: circle(150% at 50% 40%); }
 @media (prefers-reduced-motion: reduce) { .mo .produit::after { display: none; } }
+html { scroll-padding-top: 76px; }
+@media (prefers-reduced-motion: no-preference) {
+  .ouverture > * { animation: entre .9s cubic-bezier(.2,.7,.2,1) both; }
+  .ouverture > :nth-child(2) { animation-delay: .09s; }
+  .ouverture > :nth-child(3) { animation-delay: .18s; }
+  .ouverture > :nth-child(4) { animation-delay: .27s; }
+}
+@keyframes entre { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 </style>
 
 <header class="tete">
@@ -619,7 +627,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 // Motion : les entrées, une fois
 (function () {
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var sel = '.ouverture > *, .departement header > *, .produit .texte > *, .produit .resultat, .departement h2, .pourtoi > *, .pourtoi li, #choix label, .forfait, .departement table, .departement .forfaits > *';
+  var sel = '.departement header > *, .produit .texte > *, .produit .resultat, .departement h2, .pourtoi > *, .pourtoi li, #choix label, .forfait, .departement table, .departement .forfaits > *';
   var els = [].slice.call(document.querySelectorAll(sel));
   document.documentElement.classList.add('mo');
   // Un élément masqué par clip-path n'a pas de surface visible : on surveille son parent à sa place.
