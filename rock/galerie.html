@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La galerie | Le Jekyll’s, barbier à Trois-Rivières</title>
+<meta name="description" content="Le salon, la chaise rouge et le travail de Chad, au Jekyll’s, rue Royale à Trois-Rivières.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="polices.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0908'/><text x='50' y='74' text-anchor='middle' font-family='Impact,sans-serif' font-size='70' fill='%23c4161c'>J</text></svg>">
+<script>(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('js-anime');})(document.documentElement);</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="tete tete--pleine">
+  <a class="marque" href="index.html">Le <span>Jekyll’s</span></a>
+  <nav class="menu" aria-label="Menu">
+    <a class="menu__long" href="index.html#services">Services</a>
+    <a class="menu__long" href="index.html#avis">Avis</a>
+    <a href="index.html#prix">Prix</a>
+    <a class="menu__long" href="galerie.html" aria-current="page">Galerie</a>
+    <a class="bouton bouton--rouge" href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver</a>
+  </nav>
+</header>
+
+<main>
+  <section class="g-tete">
+    <div>
+      <h1>La <em>galerie</em></h1>
+      <div class="pastilles" role="group" aria-label="Filtrer les photos">
+        <button type="button" data-filtre="tout" aria-pressed="true">Tout</button>
+        <button type="button" data-filtre="salon" aria-pressed="false">Le salon</button>
+        <button type="button" data-filtre="chaise" aria-pressed="false">La chaise</button>
+        <button type="button" data-filtre="coupes" aria-pressed="false">Les coupes</button>
+      </div>
+      <p class="cache" aria-live="polite" id="filtre-etat"></p>
+    </div>
+    <p>Rue Royale, à Trois-Rivières. Le salon, la chaise rouge et le travail de Chad.</p>
+  </section>
+  <div class="damier" aria-hidden="true"></div>
+
+  <div class="g-main">
+    <!-- 15 photos et 3 cartes de couleur : 8 rangées pleines à l'ordi (4 colonnes), 16 au téléphone (2 colonnes), sans trou.
+         data-cat : les filtres des pastilles. -->
+    <div class="mosaique" id="mosaique">
+      <button class="grand" type="button" data-cat="chaise" data-t="La chaise rouge"><img src="img/chaise-34.webp" width="1000" height="750" alt="La chaise de barbier rouge de Chad, vue de trois quarts" loading="lazy"><span class="etiquette">La chaise</span></button>
+      <button class="haut" type="button" data-cat="coupes" data-t="Le rasage à la serviette chaude"><img src="img/rasage.webp" width="805" height="1000" alt="Un client sous la serviette chaude, le coupe-chou posé dessus" loading="lazy"></button>
+      <button type="button" data-cat="salon" data-t="La porte, rue Royale"><img src="img/porte-931.webp" width="750" height="1000" alt="La porte du 931 et le poteau de barbier" loading="lazy"></button>
+      <div class="carte rouge"><b>Une seule chaise</b><small>Un seul barbier.</small></div>
+      <button class="large" type="button" data-t="Chad"><img src="img/chad-100-barber.webp" width="750" height="422" alt="Chad de dos, chandail « 100 % Barber », devant une vieille voiture" loading="lazy"><span class="etiquette">Chad</span></button>
+      <button type="button" data-cat="coupes" data-t="Le motif"><img src="img/motif-fade.webp" width="805" height="1000" alt="Une coupe dégradée avec un motif rasé" loading="lazy"></button>
+      <button class="haut" type="button" data-cat="coupes" data-t="La nuque"><img src="img/nuque.webp" width="562" height="1000" alt="Une nuque dégradée, vue de dos" loading="lazy"></button>
+      <button class="large" type="button" data-cat="salon chaise" data-t="Le poste de Chad"><img src="img/salon-poste.webp" width="1000" height="750" alt="Le poste de Chad : la chaise rouge, le bureau et les cadres dorés" loading="lazy"><span class="etiquette">Le salon</span></button>
+      <button type="button" data-cat="salon" data-t="Dr Jekyll &amp; Mr Hyde"><img src="img/vitre-jekyll-hyde.webp" width="1000" height="750" alt="Le lettrage « Dr Jekyll &amp; Mr Hyde Barbier » sur la vitre" loading="lazy"></button>
+      <button class="haut" type="button" data-cat="coupes" data-t="Au travail"><img src="img/chad-coupe.webp" width="562" height="1000" alt="Chad qui coupe les cheveux d’un client" loading="lazy"></button>
+      <div class="carte or"><b>Depuis 2015</b><small>Trois-Rivières.</small></div>
+      <button class="grand" type="button" data-cat="salon" data-t="La façade"><img src="img/facade.webp" width="1000" height="750" alt="La façade du salon et son enseigne" loading="lazy"><span class="etiquette">La façade</span></button>
+      <button type="button" data-cat="salon" data-t="Le poteau"><img src="img/poteau.webp" width="1000" height="750" alt="Le poteau de barbier dans la vitrine" loading="lazy"></button>
+      <button class="haut" type="button" data-cat="salon" data-t="Le coin café"><img src="img/coin-cafe.webp" width="805" height="1000" alt="Le coin café sous une affiche de barbier" loading="lazy"></button>
+      <button class="large" type="button" data-cat="salon" data-t="La salle d’attente"><img src="img/salon-attente.webp" width="1000" height="750" alt="La salle d’attente, fauteuils de cuir et poteau" loading="lazy"></button>
+      <button type="button" data-cat="salon" data-t="Canadian Redneck"><img src="img/canadian-redneck.webp" width="1000" height="852" alt="Les produits Canadian Redneck : baume et huile à barbe" loading="lazy"></button>
+      <div class="carte damier-c large"><b>Rue Royale</b></div>
+      <button type="button" data-cat="salon" data-t="La façade, en noir et blanc"><img src="img/facade-nb.webp" width="576" height="440" alt="La façade du salon et ses voisins, en noir et blanc" loading="lazy"></button>
+    </div>
+  </div>
+
+  <section class="reserver" aria-labelledby="t-reserver">
+    <div class="reserver__panneau">
+      <img class="reserver__fond" src="img/facade-931.webp" width="1179" height="1465" alt="" loading="lazy">
+      <div class="reserver__texte">
+        <h2 class="reserver__titre" id="t-reserver" data-vu>Réserver</h2>
+        <a class="bouton bouton--rouge bouton--enorme" data-vu href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver en ligne</a>
+        <a class="reserver__tel" data-vu href="tel:+18194488663">819-448-8663</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="pied__haut">
+    <div class="pied__marque">
+      <p class="marque marque--pied">Le <span>Jekyll’s</span></p>
+      <p>Une seule chaise. Un seul barbier. Une confiance durable.</p>
+      <a class="bouton bouton--rouge" href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver</a>
+    </div>
+    <nav class="pied__col" aria-label="Pages">
+      <p class="pied__etiquette">Pages</p>
+      <a href="index.html">Accueil</a><a href="index.html#services">Services</a><a href="index.html#prix">Prix</a><a href="galerie.html">Galerie</a>
+    </nav>
+    <div class="pied__col">
+      <p class="pied__etiquette">Le salon</p>
+      <p>933, rue Royale<br>Trois-Rivières (Québec)</p>
+      <a href="tel:+18194488663">819-448-8663</a>
+    </div>
+    <div class="pied__col">
+      <p class="pied__etiquette">Suivre</p>
+      <a href="https://www.instagram.com/le_jekyll_barbershop/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <p class="pied__nom" aria-hidden="true"><span>Le Jekyll’s</span></p>
+  <div class="demo"><b>Maquette de démonstration, pas en ligne.</b> Préparée par AHat4Pat à partir de la fiche Google, de l’Instagram, du TikTok et de la page Square du salon. À confirmer avec Chad : l’adresse (933 sur Google, 931 sur la porte), les heures, son accord pour les photos et la mise en ligne, les prix (tirés de Square le 8 novembre 2026), le nom et l’identité finale. Aucune image générée par IA sur cette page. Photos : fiche Google, Instagram et TikTok du salon, et photos de Pat. Clients visibles&nbsp;: accord à confirmer avec Chad.</div>
+</footer>
+
+<dialog class="grande" aria-label="Photo en grand"><button class="fermer" type="button" aria-label="Fermer">×</button><img alt=""><p></p></dialog>
+
+<script src="site.js"></script>
+</body>
+</html>

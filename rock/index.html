@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Jekyll’s | Barbier, rue Royale, Trois-Rivières</title>
+<meta name="description" content="Le Jekyll’s, barbier de la rue Royale à Trois-Rivières depuis 2015. Une seule chaise, un seul barbier. Rasage à la serviette chaude, skin fade, taille de barbe. Réservez en ligne.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="polices.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0908'/><text x='50' y='74' text-anchor='middle' font-family='Impact,sans-serif' font-size='70' fill='%23c4161c'>J</text></svg>">
+<!-- La classe « js » : le JavaScript marche. « js-anime » : on jouera le héros (sauf en « moins de mouvement »). -->
+<script>(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('js-anime');})(document.documentElement);</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="tete">
+  <a class="marque" href="#haut">Le <span>Jekyll’s</span></a>
+  <nav class="menu" aria-label="Menu">
+    <a class="menu__long" href="#services">Services</a>
+    <a class="menu__long" href="#avis">Avis</a>
+    <a href="#prix">Prix</a>
+    <a class="menu__long" href="galerie.html">Galerie</a>
+    <a class="bouton bouton--rouge" href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 1. Le héros : « my salon is my stage, my chair is my scene ».
+       La chaise seule sur la scène noire ; le projecteur s'allume ; la chaise éclate et ses pièces sortent de l'écran ;
+       fondu vers la scène vide, le nom et Réserver. Joué une fois, de lui-même. Sans JavaScript ou en « moins de mouvement » : la scène finale, chaise entière. -->
+  <section class="heros" id="haut" aria-labelledby="nom">
+    <div class="scene" aria-hidden="false">
+      <span class="lampe" aria-hidden="true"></span>
+      <span class="faisceau faisceau--doux" aria-hidden="true"></span>
+      <span class="faisceau" aria-hidden="true"></span>
+      <span class="flaque" aria-hidden="true"></span>
+      <canvas class="poussiere" aria-hidden="true"></canvas>
+      <figure class="chaise">
+        <div class="chaise__boite">
+          <img class="chaise__entiere" src="img/chaise/chaise.webp" width="1376" height="768" alt="La chaise de barbier rouge de Chad, seule sous le projecteur, sur une scène noire" fetchpriority="high">
+        </div>
+        <figcaption class="ia">Image générée par IA</figcaption>
+      </figure>
+      <span class="eclair" aria-hidden="true"></span>
+    </div>
+    <div class="heros__texte">
+      <p class="surtitre"><span class="carre" aria-hidden="true"></span>Barbier, rue Royale, Trois-Rivières</p>
+      <h1 class="heros__nom" id="nom">Le Jekyll’s</h1>
+      <div class="heros__actions">
+        <a class="bouton bouton--rouge bouton--grand" href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver</a>
+        <a class="lien-tel" href="tel:+18194488663">819-448-8663</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="damier" aria-hidden="true"></div>
+
+  <!-- 2. Le bandeau qui défile : seulement des faits vrais -->
+  <div class="bandeau">
+    <p class="cache">Une seule chaise. Un seul barbier. Depuis 2015, rue Royale, à Trois-Rivières. Rasage à la serviette chaude, maîtrise du coupe-chou, skin fade. 5,0 sur 5 sur Google.</p>
+    <div class="bandeau__rail" aria-hidden="true">
+      <div class="bandeau__suite">
+        <span>Une seule chaise</span><i>✦</i><span>Un seul barbier</span><i>✦</i><span>Depuis 2015</span><i>✦</i><span>Rue Royale, Trois-Rivières</span><i>✦</i><span>Rasage à la serviette chaude</span><i>✦</i><span>Maîtrise du coupe-chou</span><i>✦</i><span>Skin fade</span><i>✦</i><span>5,0 sur Google</span><i>✦</i>
+      </div>
+      <div class="bandeau__suite">
+        <span>Une seule chaise</span><i>✦</i><span>Un seul barbier</span><i>✦</i><span>Depuis 2015</span><i>✦</i><span>Rue Royale, Trois-Rivières</span><i>✦</i><span>Rasage à la serviette chaude</span><i>✦</i><span>Maîtrise du coupe-chou</span><i>✦</i><span>Skin fade</span><i>✦</i><span>5,0 sur Google</span><i>✦</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. La grande phrase de Chad, avec de petites photos glissées dans les lignes, puis 6 photos (aucune n'est reprise dans les cartes des services) -->
+  <section class="accueil" id="chad" aria-labelledby="phrase">
+    <p class="surtitre surtitre--centre" data-vu><span class="carre" aria-hidden="true"></span>Chad, maître barbier</p>
+    <h2 class="phrase" id="phrase" data-vu>
+      Une seule <em>chaise.</em>
+      <span class="vignette" aria-hidden="true"><img src="img/chaise-dos.webp" alt="" width="1000" height="750" loading="lazy"></span>
+      Un seul barbier.
+      <span class="vignette" aria-hidden="true"><img src="img/chad-coupe.webp" alt="" width="562" height="1000" loading="lazy"></span>
+      Une confiance
+      <span class="vignette" aria-hidden="true"><img src="img/porte-931.webp" alt="" width="750" height="1000" loading="lazy"></span>
+      <em>durable.</em>
+    </h2>
+    <p class="accueil__texte" data-vu>Plus d’une décennie d’expérience et une maîtrise absolue du coupe-chou. Expertise suprême du Skin Fade et coupes actuelles. Chad perpétue le grand rasage traditionnel. Depuis 2015.</p>
+    <ul class="grille8" data-vu>
+      <li><img src="img/chaise-34.webp" width="1000" height="750" alt="La chaise de barbier rouge de Chad, vue de trois quarts" loading="lazy"></li>
+      <li><img src="img/nuque.webp" width="562" height="1000" alt="Une nuque dégradée, vue de dos" loading="lazy"></li>
+      <li><img src="img/facade.webp" width="1000" height="750" alt="La façade du salon et son enseigne" loading="lazy"></li>
+      <li><img src="img/chad-100-barber.webp" width="750" height="422" alt="Chad de dos, chandail « 100 % Barber », devant une vieille voiture" loading="lazy"></li>
+      <li><img src="img/coin-cafe.webp" width="805" height="1000" alt="Le coin café sous une affiche de barbier" loading="lazy"></li>
+      <li><img src="img/salon-attente.webp" width="1000" height="750" alt="La salle d’attente, fauteuils de cuir et poteau" loading="lazy"></li>
+    </ul>
+  </section>
+
+  <div class="damier" aria-hidden="true"></div>
+
+  <!-- 4. Les services, en cartes qui défilent (les « événements » de Nocturne) -->
+  <section class="services" id="services" aria-labelledby="t-services">
+    <div class="entete">
+      <p class="surtitre"><span class="carre" aria-hidden="true"></span>Services</p>
+      <div>
+        <h2 class="titre" id="t-services" data-vu>Les services</h2>
+        <p class="entete__sous" data-vu>Prix de la réservation en ligne du salon.</p>
+        <div class="fleches">
+          <button class="fleche" type="button" data-piste="-1" aria-label="Services précédents">←</button>
+          <button class="fleche" type="button" data-piste="1" aria-label="Services suivants">→</button>
+        </div>
+      </div>
+    </div>
+    <ul class="piste" tabindex="0" aria-label="Les services, à faire glisser">
+      <li class="carte-s">
+        <div class="carte-s__photo"><img src="img/rasage.webp" width="805" height="1000" alt="Un rasage à la serviette chaude, le coupe-chou posé sur la serviette" decoding="async"></div>
+        <b class="carte-s__prix">55&nbsp;$</b>
+        <div class="carte-s__bas"><h3>Rasage à la serviette chaude</h3><p>Barbe aux lames, savon de Marseille et coupe. 45&nbsp;min</p></div>
+      </li>
+      <li class="carte-s carte-s--rouge">
+        <b class="carte-s__prix">50&nbsp;$</b>
+        <p class="carte-s__gros" aria-hidden="true">Tête + barbe</p>
+        <div class="carte-s__bas"><h3>Tête et barbe à la lame</h3><p>Serviette chaude</p></div>
+      </li>
+      <li class="carte-s">
+        <div class="carte-s__photo"><img src="img/motif-fade.webp" width="805" height="1000" alt="Une coupe dégradée avec un motif rasé" decoding="async"></div>
+        <b class="carte-s__prix">35&nbsp;$</b>
+        <div class="carte-s__bas"><h3>Skin fade ou coupe actuelle</h3><p>30&nbsp;min</p></div>
+      </li>
+      <li class="carte-s carte-s--or">
+        <b class="carte-s__prix">27&nbsp;$</b>
+        <p class="carte-s__gros" aria-hidden="true">À la lame</p>
+        <div class="carte-s__bas"><h3>Tête rasée à la lame</h3></div>
+      </li>
+      <li class="carte-s">
+        <div class="carte-s__photo"><img src="img/barbe-serviette.webp" width="1350" height="1800" alt="Un client à la barbe blanche, la tête renversée sur l’appui-tête, après la taille" decoding="async"></div>
+        <b class="carte-s__prix">30&nbsp;$</b>
+        <div class="carte-s__bas"><h3>Taille de barbe à la lame</h3><p>Contours et serviette chaude. 30&nbsp;min</p></div>
+      </li>
+      <li class="carte-s carte-s--creme">
+        <b class="carte-s__prix">25&nbsp;$</b>
+        <p class="carte-s__gros" aria-hidden="true">Clipper</p>
+        <div class="carte-s__bas"><h3>Contour ou rasage clipper</h3></div>
+      </li>
+      <li class="carte-s">
+        <div class="carte-s__photo"><img src="img/chad-coupe.webp" width="562" height="1000" alt="Chad qui coupe les cheveux d’un client à la tondeuse" decoding="async"></div>
+        <b class="carte-s__prix">50&nbsp;$</b>
+        <div class="carte-s__bas"><h3>Barbe et cheveux, finition clipper</h3></div>
+      </li>
+      <li class="carte-s carte-s--damier">
+        <b class="carte-s__prix">60&nbsp;$</b>
+        <div class="carte-s__bas"><h3>Lissant brésilien</h3></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5. Les avis : les vrais avis Google, en grosses citations -->
+  <section class="avis" id="avis" aria-labelledby="t-avis">
+    <h2 class="avis__titre" id="t-avis" data-vu>Avis</h2>
+    <p class="avis__note" data-vu><b>5,0</b> <span class="etoiles" aria-hidden="true">★★★★★</span> <span>sur 5, 32 avis Google</span></p>
+    <blockquote class="citation" data-vu><p>«&nbsp;Meilleur barbier dans la région&nbsp;! Disponible, à l’écoute, perfectionniste&nbsp;!&nbsp;»</p><cite>VLSF</cite></blockquote>
+    <blockquote class="citation" data-vu><p>«&nbsp;Meilleur service reçu… J’ai une forte barbe et les conseils qu’il m’a donnés sont toujours impeccables.&nbsp;»</p><cite>Junior Desaulniers</cite></blockquote>
+    <blockquote class="citation" data-vu><p>«&nbsp;Barbier très sympathique et minutieux&nbsp;! Très beau salon aussi&nbsp;!&nbsp;»</p><cite>Steven Dery</cite></blockquote>
+  </section>
+
+  <!-- 6. Les questions fréquentes : seulement des réponses vraies -->
+  <section class="faq" id="faq" aria-labelledby="t-faq">
+    <aside class="faq__carte" data-vu>
+      <img src="img/chad-assis.webp" width="488" height="780" alt="Chad assis dans sa chaise rouge, tablier noir, bras tatoués" loading="lazy">
+      <div class="faq__contact">
+        <a href="tel:+18194488663">819-448-8663</a>
+        <a href="https://www.instagram.com/le_jekyll_barbershop/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </aside>
+    <div class="faq__droite">
+      <p class="surtitre"><span class="carre" aria-hidden="true"></span>Questions</p>
+      <h2 class="titre" id="t-faq" data-vu>Questions fréquentes</h2>
+      <div class="accordeon" data-vu>
+        <details open>
+          <summary>Quand le salon est-il ouvert&nbsp;?</summary>
+          <p>Le mardi, le salon ouvre à 13&nbsp;h. Pour les autres jours, les plages libres se voient dans la réservation en ligne.</p>
+        </details>
+        <details>
+          <summary>Combien coûte une coupe pour un ado&nbsp;?</summary>
+          <p>27&nbsp;$. Pour un enfant de moins de 12 ans&nbsp;: 20&nbsp;$.</p>
+        </details>
+        <details>
+          <summary>Y a-t-il un rabais pour les Forces armées&nbsp;?</summary>
+          <p>Oui&nbsp;: 20&nbsp;% de rabais sur tous les services pour les Forces armées canadiennes et les vétérans, avec la carte.</p>
+        </details>
+        <details>
+          <summary>Où est le salon&nbsp;?</summary>
+          <p>933, rue Royale, centre-ville de Trois-Rivières (Québec) G9A&nbsp;4H7.</p>
+        </details>
+        <details>
+          <summary>Comment réserver&nbsp;?</summary>
+          <p>En ligne, avec le bouton Réserver, ou par téléphone au <a href="tel:+18194488663">819-448-8663</a>.</p>
+        </details>
+        <details>
+          <summary>Vendez-vous des produits pour la barbe&nbsp;?</summary>
+          <p>Oui, en vente au salon&nbsp;: l’huile à barbe Canadian Redneck (25&nbsp;$), le baume et la cire Canadian Redneck (20&nbsp;$).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Les prix, en cartes (le « Membership » de Nocturne) -->
+  <section class="prix" id="prix" aria-labelledby="t-prix">
+    <div class="entete">
+      <p class="surtitre"><span class="carre" aria-hidden="true"></span>Prix</p>
+      <div>
+        <h2 class="titre" id="t-prix" data-vu>Tous les prix</h2>
+        <p class="entete__sous" data-vu>Tirés de la page de réservation du salon (Square) le 8&nbsp;novembre 2026.</p>
+      </div>
+    </div>
+    <div class="cartes-p">
+      <section class="carte-p carte-p--noir" data-vu aria-labelledby="p1">
+        <h3 id="p1">À la lame</h3>
+        <ul>
+          <li><span>Rasage à la serviette chaude <small>Barbe aux lames, savon de Marseille et coupe. 45&nbsp;min</small></span><b>55&nbsp;$</b></li>
+          <li><span>Tête et barbe à la lame <small>Serviette chaude</small></span><b>50&nbsp;$</b></li>
+          <li><span>Taille de barbe à la lame <small>Contours et serviette chaude. 30&nbsp;min</small></span><b>30&nbsp;$</b></li>
+          <li><span>Tête rasée à la lame</span><b>27&nbsp;$</b></li>
+        </ul>
+      </section>
+      <section class="carte-p carte-p--rouge" data-vu aria-labelledby="p2">
+        <h3 id="p2">Cheveux</h3>
+        <ul>
+          <li><span>Skin fade ou coupe actuelle <small>30&nbsp;min</small></span><b>35&nbsp;$</b></li>
+          <li><span>Barbe et cheveux, finition clipper</span><b>50&nbsp;$</b></li>
+          <li><span>Contour ou rasage clipper</span><b>25&nbsp;$</b></li>
+          <li><span>Lissant brésilien</span><b>60&nbsp;$</b></li>
+        </ul>
+      </section>
+      <section class="carte-p carte-p--or" data-vu aria-labelledby="p3">
+        <h3 id="p3">Famille et amis</h3>
+        <ul>
+          <li><span>Ado</span><b>27&nbsp;$</b></li>
+          <li><span>Enfant (moins de 12 ans)</span><b>20&nbsp;$</b></li>
+          <li><span>Sortie père et fils</span><b class="petit-b">Sur demande</b></li>
+          <li><span>Duo deux amis</span><b class="petit-b">Sur demande</b></li>
+        </ul>
+      </section>
+      <section class="carte-p carte-p--creme" data-vu aria-labelledby="p4">
+        <h3 id="p4">Extras et produits</h3>
+        <ul>
+          <li><span>Black mask, avec une coupe</span><b>8&nbsp;$</b></li>
+          <li><span>Cire, oreilles ou nez</span><b>4&nbsp;$</b></li>
+          <li><span>Huile à barbe Canadian Redneck <small>En vente au salon</small></span><b>25&nbsp;$</b></li>
+          <li><span>Baume et cire Canadian Redneck <small>En vente au salon</small></span><b>20&nbsp;$</b></li>
+        </ul>
+      </section>
+      <p class="veterans" data-vu><b>20&nbsp;%</b> <span>de rabais sur tous les services pour les Forces armées canadiennes et les vétérans, avec la carte.</span></p>
+    </div>
+  </section>
+
+  <!-- 8. Réserver : pas de formulaire. Le gros bouton et le téléphone. -->
+  <section class="reserver" id="reserver" aria-labelledby="t-reserver">
+    <div class="reserver__panneau">
+      <img class="reserver__fond" src="img/facade-931.webp" width="1179" height="1465" alt="" loading="lazy">
+      <div class="reserver__texte">
+        <h2 class="reserver__titre" id="t-reserver" data-vu>Réserver</h2>
+        <p class="reserver__phrase" data-vu>Ici, la tradition coupe toujours juste.</p>
+        <a class="bouton bouton--rouge bouton--enorme" data-vu href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver en ligne</a>
+        <a class="reserver__tel" data-vu href="tel:+18194488663">819-448-8663</a>
+        <p class="reserver__adresse" data-vu>933, rue Royale, centre-ville de Trois-Rivières (Québec) G9A&nbsp;4H7<br>Ouvre à 13&nbsp;h le mardi.</p>
+      </div>
+    </div>
+  </section>
+
+  <ul class="bande-photos" aria-hidden="true">
+    <li><img src="img/salon-poste.webp" alt="" width="1000" height="750" loading="lazy"></li>
+    <li><img src="img/canadian-redneck.webp" alt="" width="1000" height="852" loading="lazy"></li>
+    <li><img src="img/vitre-jekyll-hyde.webp" alt="" width="1000" height="750" loading="lazy"></li>
+    <li><img src="img/facade-nb.webp" alt="" width="576" height="440" loading="lazy"></li>
+    <li><img src="img/porte-931.webp" alt="" width="750" height="1000" loading="lazy"></li>
+  </ul>
+</main>
+
+<!-- 9. Le pied, avec le nom en énorme -->
+<footer class="pied">
+  <div class="pied__haut">
+    <div class="pied__marque">
+      <p class="marque marque--pied">Le <span>Jekyll’s</span></p>
+      <p>Une seule chaise. Un seul barbier. Une confiance durable.</p>
+      <a class="bouton bouton--rouge" href="https://book.squareup.com/appointments/0jnd7mhsbqy3cp/location/L70EBNBD76BXY/services" target="_blank" rel="noopener">Réserver</a>
+    </div>
+    <nav class="pied__col" aria-label="Pages">
+      <p class="pied__etiquette">Pages</p>
+      <a href="#haut">Accueil</a><a href="#services">Services</a><a href="#prix">Prix</a><a href="galerie.html">Galerie</a>
+    </nav>
+    <div class="pied__col">
+      <p class="pied__etiquette">Le salon</p>
+      <p>933, rue Royale<br>Trois-Rivières (Québec)</p>
+      <a href="tel:+18194488663">819-448-8663</a>
+    </div>
+    <div class="pied__col">
+      <p class="pied__etiquette">Suivre</p>
+      <a href="https://www.instagram.com/le_jekyll_barbershop/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <p class="pied__nom" aria-hidden="true"><span>Le Jekyll’s</span></p>
+  <div class="demo"><b>Maquette de démonstration, pas en ligne.</b> Préparée par AHat4Pat à partir de la fiche Google, de l’Instagram, du TikTok et de la page Square du salon. À confirmer avec Chad : l’adresse (933 sur Google, 931 sur la porte), les heures, son accord pour les photos et la mise en ligne, les prix (tirés de Square le 8 novembre 2026), le nom et l’identité finale. Image générée par IA dans Google Flow : la chaise rouge du héros (découpée en pièces pour l’éclatement). Les autres photos viennent de la fiche Google, de l’Instagram et du TikTok du salon, et des photos de Pat. Avis : Google. Musique générée par IA (Suno) : 3 versions à choisir.</div>
+</footer>
+
+<!-- Musique : 3 versions générées par IA (Suno) pour que Chad choisisse. Jamais de lecture automatique. -->
+<audio id="musique" preload="none" loop></audio>
+<div class="musique" role="group" aria-label="Musique : choisir une version" hidden>
+  <span class="musique__mot" aria-hidden="true">♪ Musique</span>
+  <button type="button" aria-pressed="false" data-src="musique/version-mi.mp3">1 · Rockabilly</button>
+  <button type="button" aria-pressed="false" data-src="musique/version-fille.mp3">2 · Voix de fille</button>
+  <button type="button" aria-pressed="false" data-src="musique/version-psychobilly.mp3">3 · Psychobilly</button>
+</div>
+
+<script src="gsap.min.js" onerror="document.documentElement.classList.remove('js-anime')"></script>
+<script src="site.js"></script>
+</body>
+</html>
