@@ -20,12 +20,30 @@ p{margin:0 0 8px}
 </style></head><body><main>
 <h1>Chez <span>Chad</span></h1>
 
-<section class="bloc calme"><h2>Respire</h2>
-<p>Tu ne vends rien aujourd'hui. Tu lui montres ce que t'as fait pour lui et tu écoutes. C'est gratuit pour lui. Il ne peut pas te dire non à ça.</p></section>
+<section class="bloc calme"><h2>Ma ligne de conduite</h2>
+<label><input type="checkbox"><span><b>J'arrive chill.</b> Je respire avant d'entrer. Je ne suis pas pressé.</span></label>
+<label><input type="checkbox"><span><b>Je prends de ses nouvelles d'abord.</b> Comment ça va, le salon, sa semaine. Les affaires viennent après.</span></label>
+<label><input type="checkbox"><span><b>J'écoute plus que je parle.</b> Il parle, je me tais. Un silence, c'est correct.</span></label>
+<label><input type="checkbox"><span><b>Je suis là, avec lui.</b> Mon téléphone sert seulement à lui montrer les pages.</span></label>
+<label><input type="checkbox"><span><b>Je ne vends rien.</b> C'est gratuit pour lui. Je viens chercher son avis franc.</span></label>
+<label><input type="checkbox"><span><b>S'il critique, je dis merci.</b> C'est exactement ce que je suis venu chercher.</span></label>
+<label><input type="checkbox"><span><b>Je laisse ça court.</b> Il travaille. Je pars avant qu'il ait hâte que je parte.</span></label>
+</section>
 
-<section class="bloc"><h2>Pour commencer</h2>
-<p class="cite">« Je me suis lancé dans les sites web pour les commerces d'ici. J'en ai fait un pour toi, gratuit. Je veux juste ton avis franc. Je te le montre ? »</p>
-<p class="note">Montre le rock, puis la version chic. Laisse-le regarder sans parler.</p></section>
+<section class="bloc"><h2>Rappeler notre deal</h2>
+<p>Après les nouvelles, simplement :</p>
+<p class="cite">« T'as encore envie de tester mes affaires, puis me donner tes commentaires ? Moi, je te les fournis gratis. »</p>
+<p class="note">S'il dit oui (c'est sûr que oui) : « Parfait. Regarde ce que j'ai fait pour toi. » Puis tu montres le site rock.</p></section>
+
+<section class="bloc"><h2>Si je deviens nerveux</h2>
+<p>Je respire. Je pose une question et j'écoute la réponse. Lui, il aime son salon : le faire parler de son salon, ça suffit.</p></section>
+
+<section class="bloc"><h2>Pour montrer</h2>
+<p>On va vite à la chaise. Deux façons, c'est lui qui choisit :</p>
+<label><input type="checkbox"><span><b>À une table</b> : je lui montre sur mon téléphone, le rock, puis la version chic, puis mes offres.</span></label>
+<label><input type="checkbox"><span><b>Pendant qu'il me rase</b> : je lui raconte et je lui fais entendre les tounes. Je lui montre les pages après le rasage.</span></label>
+<p class="cite">« Je me suis lancé dans les sites web pour les commerces d'ici. J'en ai fait un pour toi, gratuit. Je veux juste ton avis franc. »</p>
+<p class="note">Pendant qu'il regarde : je me tais.</p></section>
 
 <section class="bloc"><h2>La question qui ouvre tout</h2>
 <p class="cite">« À part couper, qu'est-ce qui te prend le plus de temps dans ta semaine ? »</p>
@@ -60,7 +78,7 @@ p{margin:0 0 8px}
 <p class="note">Jamais « 5 étoiles en échange du gratuit » : Google l'interdit. Un avis honnête plus tard, s'il est content.</p></section>
 </main>
 <script>
-(function(){var c=[].slice.call(document.querySelectorAll('input'));try{var g=JSON.parse(localStorage.getItem('chad-liste')||'[]');c.forEach(function(b,i){b.checked=g[i]===1;});}catch(e){}
-c.forEach(function(b){b.addEventListener('change',function(){try{localStorage.setItem('chad-liste',JSON.stringify(c.map(function(x){return x.checked?1:0;})));}catch(e){}});});})();
+(function(){var c=[].slice.call(document.querySelectorAll('input'));try{var g=JSON.parse(localStorage.getItem('chad-liste-2')||'[]');c.forEach(function(b,i){b.checked=g[i]===1;});}catch(e){}
+c.forEach(function(b){b.addEventListener('change',function(){try{localStorage.setItem('chad-liste-2',JSON.stringify(c.map(function(x){return x.checked?1:0;})));}catch(e){}});});})();
 </script>
 </body></html>
