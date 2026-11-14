@@ -2,7 +2,17 @@
 <html lang="fr-CA"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<style>body{margin:0}img{max-width:100%}</style>
+<style>body{margin:0}img{max-width:100%}
+.chemin { padding-block: 0 clamp(36px, 6vw, 72px); display: grid; gap: 18px; }
+.chemin ol { list-style: none; margin: 0; padding: 0; counter-reset: c; display: grid; gap: 0; border-top: 1px solid rgba(255,255,255,.16); }
+.chemin li { counter-increment: c; border-bottom: 1px solid rgba(255,255,255,.16); }
+.chemin li a { display: grid; grid-template-columns: 3.2ch 1fr; gap: 0 14px; padding: 16px 0; color: var(--creme-2); text-decoration: none; font-size: 17px; line-height: 1.45; }
+.chemin li a::before { content: counter(c, decimal-leading-zero); grid-row: 1 / span 2; font: italic 900 26px/1 var(--f-titre); color: var(--rouge); }
+.chemin li b { display: block; grid-column: 2; font: italic 800 22px/1.1 var(--f-titre); letter-spacing: .03em; text-transform: uppercase; color: var(--creme); margin-bottom: 4px; }
+.chemin li a:hover b, .chemin li a:focus-visible b { color: #fff; }
+.chemin .calcul { max-width: 68ch; font-size: 16px; color: var(--creme-2); border-left: 3px solid var(--rouge); padding-left: 14px; }
+.chemin .calcul b { color: var(--creme); }
+</style>
 <title>Pour Chad, Le Jekyll's</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="polices.css">
@@ -252,8 +262,20 @@ html { scroll-padding-top: 76px; }
   <section class="enveloppe ouverture">
     <p class="surtitre"><span class="carre"></span>Préparé pour Chad, Le Jekyll's, rue Royale</p>
     <h1>Ce que je peux faire pour toi</h1>
-    <p class="mot">Chad, voici ce que j'offre aux commerces d'ici. Pour chaque service, tu vois <strong>ce que c'est</strong>, et <strong>ce que ça donne chez toi</strong>, monté avec tes photos, tes prix et tes services. Toi, tu n'as rien à faire : je m'en occupe.</p>
-    <p class="cartouche">Pour toi : gratuit pendant 6 mois <small>En échange : tu me dis franchement, en privé, ce que tu en penses.</small></p>
+    <p class="mot">Chad, tu me l'as dit : <strong>rien n'est réservé d'avance</strong>. Une semaine, tu es plein ; l'autre, tu ne le sais pas. Tout ce qui suit sert à une seule chose : <strong>que ta chaise soit réservée avant que la semaine commence</strong>.</p>
+    <p class="mot">Je ne viens pas te prendre de l'argent : je viens t'en faire faire. Si ça ne te rapporte pas, tu ne gardes rien, et ça ne t'a rien coûté.</p>
+    <p class="cartouche">Pour toi : gratuit pendant 6 mois <small>Après, tu gardes seulement ce qui t'a rapporté. En échange : ton avis franc, en privé.</small></p>
+  </section>
+  <section class="enveloppe chemin" aria-label="Comment ça remplit ta chaise">
+    <p class="surtitre"><span class="carre"></span>Comment ça remplit ta chaise</p>
+    <ol>
+      <li><a href="#ia"><b>L'appel manqué</b> Tu as la lame dans les mains, tu ne réponds pas. Ton client reçoit tout de suite un texto avec ton lien pour réserver, au lieu d'appeler ailleurs.</a></li>
+      <li><a href="#site"><b>Ton site</b> Celui qui te trouve à 11 h le soir réserve sur le coup, avec le bouton, au lieu d'attendre à demain et d'oublier.</a></li>
+      <li><a href="#reseaux"><b>Ta fiche Google et la demande d'avis</b> Tu es premier quand on cherche un barbier à Trois-Rivières. C'est là que les nouveaux clients te trouvent ; les avis récents t'y gardent.</a></li>
+      <li><a href="#reseaux"><b>La présence chaque mois</b> Une visite, 8 publications. Tes réguliers te voient passer et pensent à réserver.</a></li>
+      <li><a href="#ia"><b>L'assistant</b> Quelqu'un te demande ton prix sur Messenger le soir : il a sa réponse tout de suite, avec le bouton pour réserver.</a></li>
+    </ol>
+    <p class="calcul"><b>Le calcul.</b> Une coupe de plus par jour, à 3 $ : 17 $ par semaine si tu ouvres cinq jours. Un rasage à la serviette chaude de plus par jour, à 5 $ : 27 $. C'est un calcul, pas une promesse : on comptera tes réservations pour le savoir.</p>
   </section>
   <div class="damier" aria-hidden="true"></div>
 
@@ -263,7 +285,7 @@ html { scroll-padding-top: 76px; }
       <header>
         <span class="no" aria-hidden="true">01</span>
         <h2>Ton site web</h2>
-        <p>Un vrai site à ton image, qui envoie les gens directement à ta réservation en ligne.</p>
+        <p>Celui qui te cherche, même à 11 h le soir, arrive chez toi et réserve sur le coup. Un vrai site à ton image, avec le bouton qui mène à ta réservation.</p>
       </header>
 
       <article class="produit">
@@ -336,7 +358,7 @@ html { scroll-padding-top: 76px; }
       <header>
         <span class="no" aria-hidden="true">02</span>
         <h2>Tes réseaux sociaux</h2>
-        <p>Instagram et Facebook : on publie une fois, ça part sur les deux. Et ta fiche Google, la plus importante pour un commerce d'ici : 83 % des gens lisent les avis sur Google (BrightLocal, 2025).</p>
+        <p>Tes réguliers te voient passer et pensent à réserver ; les nouveaux te trouvent sur Google. Instagram et Facebook : on publie une fois, ça part sur les deux. Et ta fiche Google, la plus importante pour un commerce d'ici : 83 % des gens lisent les avis sur Google (BrightLocal, 2025).</p>
       </header>
 
       <article class="produit">
@@ -497,7 +519,7 @@ html { scroll-padding-top: 76px; }
       <header>
         <span class="no" aria-hidden="true">03</span>
         <h2>L'IA qui travaille pour toi</h2>
-        <p>Pendant que tu as la lame à la main, quelqu'un répond pour toi. Bâti sur mesure, et je l'entretiens.</p>
+        <p>Pendant que tu as la lame à la main, aucun client ne se perd : il reçoit sa réponse et ton lien pour réserver. Bâti sur mesure, et je l'entretiens.</p>
       </header>
 
       <article class="produit">
@@ -603,7 +625,7 @@ html { scroll-padding-top: 76px; }
     <div class="enveloppe">
       <p class="surtitre" style="color:#fff"><span class="carre" style="background:#fff"></span>Pour toi, Chad</p>
       <h2>Qu'est-ce que tu veux essayer ?</h2>
-      <p class="mot">Tout est gratuit pour toi pendant 6 mois. Tu n'es pas obligé de tout prendre. Après, tu gardes seulement ce qui te sert, au vrai prix. Ce que je te demande : ton avis franc, en privé, sur chaque service.</p>
+      <p class="mot">Tout est gratuit pour toi pendant 6 mois. Tu n'es pas obligé de tout prendre. Après, tu gardes seulement ce qui t'a rapporté, au vrai prix. On le saura, parce qu'on va compter tes réservations. Ce que je te demande : ton avis franc, en privé, sur chaque service.</p>
       <div class="choix" id="choix">
         <label><input type="checkbox" value="site"> Le site</label>
         <label><input type="checkbox" value="demarrage"> Instagram et Google refaits</label>
