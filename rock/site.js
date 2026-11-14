@@ -286,9 +286,8 @@
     var tr = trajectoires();
     els.forEach(function (o, i) {
       var t = tr[i], d = E + o.d * .5;
-      tl.to(o.el, { x: t.x * .22, y: t.y * .22, rotation: t.rot * .12, scale: 1 + (t.sc - 1) * .06, duration: DETENTE, ease: 'power4.out', force3D: true }, d)
-        .to(o.el, { x: t.x * .29, y: t.y * .29, rotation: t.rot * .2, scale: 1 + (t.sc - 1) * .12, duration: DERIVE, ease: 'sine.inOut' }, d + DETENTE)
-        .to(o.el, { x: t.x, y: t.y, rotation: t.rot, scale: t.sc, duration: SORTIE, ease: 'power2.in' }, d + DETENTE + DERIVE);
+      // un seul geste, sans arrêt : la pièce part vite et ne s'arrête jamais avant d'être sortie de l'écran (Pat, 14 nov.)
+      tl.to(o.el, { x: t.x, y: t.y, rotation: t.rot, scale: t.sc, duration: DETENTE + DERIVE + SORTIE, ease: 'power2.out', force3D: true }, d);
     });
     // le fondu vers l'écran suivant : pendant la sortie, la lumière descend sur le nom ; le nom et Réserver arrivent
     var S = E + DETENTE + DERIVE;
