@@ -296,14 +296,33 @@
       .to(faisceaux, { opacity: .85, duration: .8 }, S + .2)
       .fromTo(texte, { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 1, stagger: .14, ease: 'power3.out' }, S + .1)
       .fromTo(heros.querySelector('.heros__nom'), { scale: 1.08 }, { scale: 1, duration: 1.3, ease: 'power3.out' }, S + .1);
-    var parti = false;
+    // La chaise attend qu'on la pousse : un clic ou un toucher sur elle, rien d'autre. Défiler ne la fait plus éclater.
+    var bouton = heros.querySelector('.pousse'), parti = false, garde = null;
     function eclate() {
       if (parti) return; parti = true;
-      ['wheel', 'touchstart', 'pointerdown', 'keydown', 'scroll'].forEach(function (n) { window.removeEventListener(n, eclate, true); });
+      if (bouton) bouton.classList.add('partie');
       tl.resume();
-      setTimeout(finale, 8000);
+      garde = setTimeout(finale, 8000);
     }
-    ['wheel', 'touchstart', 'pointerdown', 'keydown', 'scroll'].forEach(function (n) { window.addEventListener(n, eclate, { capture: true, passive: true }); });
+    // La chaise revient à chaque fois : dès que le héros a quitté l'écran après un éclatement, la scène repart du début.
+    function retour() {
+      if (!parti) return;
+      clearTimeout(garde); parti = false; vide = false; fini = false;
+      doc.classList.remove('heros-vide', 'heros-fin'); boite.classList.remove('eclatee');
+      if (bouton) bouton.classList.remove('partie');
+      tl.restart(true);
+      setTimeout(function () { if (ctx) G = geo(); }, 1000);
+    }
+    if (bouton) {
+      bouton.hidden = false;
+      tl.to(bouton, { opacity: 1, duration: .5 }, 1.3);   // l'invitation arrive quand la chaise est allumée
+      bouton.addEventListener('click', eclate);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) { if (!es[es.length - 1].isIntersecting) retour(); }, { threshold: 0 }).observe(heros);
+      }
+    } else {
+      ['wheel', 'touchstart', 'pointerdown', 'keydown', 'scroll'].forEach(function (n) { window.addEventListener(n, eclate, { capture: true, passive: true }); });
+    }
   }).catch(function () {
     secours();
   });
